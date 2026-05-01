@@ -1,0 +1,49 @@
+/* Sayfanın genel ayarları */
+body {
+  font-family: Arial, sans-serif; /* Yazı tipi */
+  background-color: #e3f2fd; /* Açık mavi arka plan */
+  margin: 0; /* Kenar boşluklarını sıfırlar */
+  text-align: center; /* Yazıları ortalar */
+}
+
+/* Başlık özellikleri */
+h1 {
+  color: #0d47a1; /* Koyu mavi */
+  margin-top: 30px;
+}
+
+/* Menü (navbar) */
+nav {
+  background-color: #1976d2; /* Mavi arka plan */
+  padding: 15px;
+}
+
+/* Menü linkleri */
+nav a {
+  color: white; /* Yazı rengi */
+  text-decoration: none; /* Alt çizgiyi kaldırmak için  */
+  margin: 15px; /* Linkler arası boşluğu bırakır */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Üzerine gelince rengi değiştirir */
+nav a:hover {
+  color: #ffeb3b; /* Sarı */
+}
+
+/* Paragraf */
+p {
+  font-size: 18px;
+  margin: 20px;
+}
+
+/* İçerik kutusu */
+.container {
+  background-color: white; /* Beyaz kutu */
+  margin: 30px auto; /* Ortalar */
+  padding: 20px;
+  width: 60%; /* Genişlik */
+  border-radius: 10px; /* Köşeleri yuvarlamak için */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Gölge ekler */
+}
