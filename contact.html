@@ -9,7 +9,8 @@
 
 <h1>İletişim</h1>
 
-<nav>
+// menü kontrolü 
+<nav> 
   <a href="index.html">Ana Sayfa</a> |
   <a href="about.html">Hakkında</a> |
   <a href="cv.html">CV</a> |
@@ -17,8 +18,51 @@
 </nav>
 
 <div class="container">
-<p>Bana buradan ulaşabilirsiniz.</p>
+
+<!-- Form başlangıç -->
+  <form onsubmit="return kontrolEt()">
+
+    <label>Adınız:</label><br>
+    <input type="text" id="ad"><br><br>
+
+    <label>Email:</label><br>
+
+    <input type="email" id="email"><br><br>
+
+    <label>Mesaj:</label><br>
+    <textarea id="mesaj"></textarea><br><br>
+
+    <button type="submit">Gönder</button>
+
+  </form>
+
 </div>
+
+<!-- JavaScript -->
+<script>
+function kontrolEt() {
+
+  let ad = document.getElementById("ad").value;
+  let email = document.getElementById("email").value;
+  let mesaj = document.getElementById("mesaj").value;
+
+  // boş kontrol
+  if (ad == "" || email == "" || mesaj == "") {
+    alert("Lütfen tüm alanları doldurun!");
+    return false;
+  }
+
+  // email kontrol (basit)
+  if (!email.includes("@")) {
+    alert("Geçerli bir email girin!");
+    return false;
+  }
+
+  alert("Mesajınız gönderildi!");
+  return true;
+}
+</script>
+
 
 </body>
 </html>
