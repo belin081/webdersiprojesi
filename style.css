@@ -144,3 +144,13 @@ button:hover {
 .card a:hover {
   background-color: #0d47a1;
 } 
+.slider {
+  width: 400px;
+  margin: 20px auto;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+}

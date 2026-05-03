@@ -24,6 +24,15 @@
 
   <p>Afyonkarahisar, Türkiye'nin Ege Bölgesi'nde yer alan tarihi ve kültürel zenginlikleriyle bilinen bir şehirdir.</p>
 
+  <h3>Şehrimden Görseller</h3>
+   
+   <div class="slider">
+  <img class="slide" src="https://panel.piertur.com/uploads/ng-afyon-wellness-convention/ng-afyon-wellness-convention-fotograflari-a4Kbr.jpg">
+  <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMSlPyaseCHIPyxWNxp6EHDwuuzlQSaPQiVw&s.jpg">
+  <img class="slide" src="https://www.yapi.com.tr/Uploads/HaberMedya/115720/99214722df8f4e268785cafb8485c60b-480x268.jpg">
+   <img class="slide" src="https://iaysr.tmgrup.com.tr/444900/780/411/0/101/800/522?u=https://iysr.tmgrup.com.tr/2021/06/28/40-direkli-tarihi-ulu-cami-unesco-gecici-listesine-girdi-1624886863917.jpg">
+   </div>
+  
   <p>Özellikle termal kaplıcaları, sucuğu ve kaymağı ile ünlüdür.</p>
 
   <h2>Tarihi ve Turistik Yerler</h2>
@@ -31,6 +40,7 @@
     <li>Afyon Kalesi</li>
     <li>Frig Vadisi</li>
     <li>Ulu Camii</li>
+    <li>Termal Kaplıcaları </li>
   </ul>
 
   <h2>Yöresel Lezzetler</h2>
@@ -42,6 +52,27 @@
   </ul>
 
 </div>
+<script>
+let index = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  index++;
+  if (index > slides.length) {
+    index = 1;
+  }
+
+  slides[index - 1].style.display = "block";
+
+  setTimeout(showSlides, 2000); // 2 saniyede değişir
+}
+</script>
 
 </body>
-</html>
+</html> 
