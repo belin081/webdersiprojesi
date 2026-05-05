@@ -145,6 +145,7 @@ button:hover {
   background-color: #0d47a1;
 } 
 .slider {
+  position:relative;
   width: 400px;
   margin: 20px auto;
 }
@@ -153,4 +154,35 @@ button:hover {
   width: 100%;
   display: none;
   border-radius: 10px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2d6cdf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1a4ea1;
 }

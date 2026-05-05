@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Giriş Yap</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Giriş Yap</h1>
+
+<nav>
+  <a href="index.html">Ana Sayfa</a> |
+  <a href="about.html">Hakkında</a> |
+  <a href="cv.html">CV</a> |
+  <a href="contact.html">İletişim</a> |
+  <a href="sehrim.html">Şehrim</a> |
+  <a href="login.html">Giriş</a>
+</nav>
+
+<div class="container">
+
+  <form onsubmit="return kontrol()">
+
+    <label>Kullanıcı Adı:</label><br>
+    <input type="text" id="kullanici"><br><br>
+
+    <label>Şifre:</label><br>
+    <input type="password" id="sifre"><br><br>
+
+    <button type="submit">Giriş Yap</button>
+
+  </form>
+
+</div>
+
+<script>
+function kontrol() {
+  let kullanici = document.getElementById("kullanici").value;
+  let sifre = document.getElementById("sifre").value;
+
+  if (kullanici == "" || sifre == "") {
+    alert("Boş bırakmayın!");
+    return false;
+  }
+
+  if (kullanici == "admin" && sifre == "1234") {
+    alert("Giriş başarılı!");
+    return true;
+  } else {
+    alert("Hatalı giriş!");
+    return false;
+  }
+}
+</script>
+
+</body>
+</html>

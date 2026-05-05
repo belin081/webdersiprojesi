@@ -14,7 +14,8 @@
   <a href="about.html">Hakkında</a> |
   <a href="cv.html">CV</a> |
   <a href="contact.html">İletişim</a> |
-  <a href="sehrim.html">Şehrim</a>
+  <a href="sehrim.html">Şehrim</a> |
+  <a href="login.html">Giriş</a>
 </nav>
 
 <div class="container">
@@ -30,7 +31,11 @@
   <img class="slide" src="https://panel.piertur.com/uploads/ng-afyon-wellness-convention/ng-afyon-wellness-convention-fotograflari-a4Kbr.jpg">
   <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMSlPyaseCHIPyxWNxp6EHDwuuzlQSaPQiVw&s.jpg">
   <img class="slide" src="https://www.yapi.com.tr/Uploads/HaberMedya/115720/99214722df8f4e268785cafb8485c60b-480x268.jpg">
-   <img class="slide" src="https://iaysr.tmgrup.com.tr/444900/780/411/0/101/800/522?u=https://iysr.tmgrup.com.tr/2021/06/28/40-direkli-tarihi-ulu-cami-unesco-gecici-listesine-girdi-1624886863917.jpg">
+  <img class="slide" src="https://iaysr.tmgrup.com.tr/444900/780/411/0/101/800/522?u=https://iysr.tmgrup.com.tr/2021/06/28/40-direkli-tarihi-ulu-cami-unesco-gecici-listesine-girdi-1624886863917.jpg">
+
+   <button class="prev" onclick="onceki()">❮</button>
+  <button class="next" onclick="sonraki()">❯</button>
+
    </div>
   
   <p>Özellikle termal kaplıcaları, sucuğu ve kaymağı ile ünlüdür.</p>
@@ -52,25 +57,34 @@
   </ul>
 
 </div>
-<script>
-let index = 0;
-showSlides();
 
-function showSlides() {
+<script>
+let index = 1;
+goster(index);
+
+function sonraki() {
+  goster(index += 1);
+}
+
+function onceki() {
+  goster(index -= 1);
+}
+
+function goster(n) {
   let slides = document.getElementsByClassName("slide");
+
+  if (n > slides.length) {
+    index = 1;
+  }
+  if (n < 1) {
+    index = slides.length;
+  }
 
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
-  index++;
-  if (index > slides.length) {
-    index = 1;
-  }
-
   slides[index - 1].style.display = "block";
-
-  setTimeout(showSlides, 2000); // 2 saniyede değişir
 }
 </script>
 
