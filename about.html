@@ -38,7 +38,6 @@
             <p class="api-note">(Veriler TMDb API üzerinden canlı çekilmektedir)</p>
             
             <div id="movie-grid" class="movie-grid">
-                <p>Filmler yükleniyor...</p>
             </div>
         </section>
     </div>
@@ -47,59 +46,101 @@
         <p>© 2026 Kişisel Web Sitesi | Tüm hakları saklıdır.</p>
     </footer>
 
-  <script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
     const movieGrid = document.getElementById('movie-grid');
 
-    // 1. GARANTİ YEDEK VERİLER (Resimler TMDB sunucusundan direkt çekiliyor)
+    // 1. GARANTİLİ YEREL YEDEK VERİLER (İnternet engellense bile çalışır)
     const backupMovies = [
-        {id: 157336, title: "Interstellar", vote: 8.7, poster: "https://image.tmdb.org/t/p/w500/gEU2QniE6EwfVnzngot2QoYvCun.jpg"},
-        {id: 27205, title: "Inception", vote: 8.8, poster: "https://image.tmdb.org/t/p/w500/edvWebvCECcOllvFU4jQvUBicAW.jpg"},
-        {id: 155, title: "The Dark Knight", vote: 9.0, poster: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDp9s1DksgnpGvD3O9a.jpg"},
-        {id: 1124, title: "The Prestige", vote: 8.5, poster: "https://image.tmdb.org/t/p/w500/bdN3g8E5pS78XjaA0KFZFq06ubB.jpg"}
+        { 
+            id: 157336, 
+            title: "Yıldızlararası", 
+            vote: 8.7, 
+            // Kendi klasörümüzdeki resmi hedefliyoruz
+            poster: "resimler/interstellar.jpg" 
+        },
+        { 
+            id: 27205, 
+            title: "Başlangıç", 
+            vote: 8.8, 
+            poster: "resimler/inception.jpg" 
+        },
+        { 
+            id: 155, 
+            title: "Kara Şövalye", 
+            vote: 9.0, 
+            poster: "resimler/darkknight.jpg" 
+        },
+        { 
+            id: 1124, 
+            title: "Prestij", 
+            vote: 8.5, 
+            poster: "resimler/prestige.jpg" 
+        }
     ];
 
-    // 2. FİLMLERİ ÇEKME FONKSİYONU
+    // 2. API'DEN VERİ ÇEKME FONKSİYONU
     async function fetchMovies() {
         try {
-            // Yeni çalışan API anahtarı
+            console.log("API'den güncel filmler isteniyor...");
+            // Güncel API anahtarın
             const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=550921d74263625345758102604e38e8&language=tr-TR');
-            
-            if (!response.ok) throw new Error();
-            
+
+            if (!response.ok) throw new Error("API Erişim Hatası");
+
             const data = await response.json();
+            
+            // İlk 4 filmi işle
             const movies = data.results.slice(0, 4).map(m => ({
                 id: m.id,
                 title: m.title,
                 vote: m.vote_average.toFixed(1),
+                // Buradaki poster_path hala TMDb sunucusuna istek atar (Hocanda çalışır)
                 poster: "https://image.tmdb.org/t/p/w500" + m.poster_path
             }));
+
             renderMovies(movies);
         } catch (e) {
-            console.log("API Engeli! Yedekler yükleniyor...");
+            console.warn("API engeline takıldı, yerel sinematik yedek veriler yükleniyor...");
+            // catch bloğuna girdiğinde senin ELLE yazdığın ve klasördeki resimleri hedefleyen backupMovies'i renderlayacak.
             renderMovies(backupMovies);
         }
     }
 
-    // 3. EKRANA BASMA (Titremeyi engelleyen temiz yapı)
+    // 3. EKRANA BASMA FONKSİYONU
     function renderMovies(list) {
-        let htmlContent = '';
+        movieGrid.innerHTML = ""; // "Yükleniyor" yazısını temizle
+
+        const fragment = document.createDocumentFragment();
+
         list.forEach(movie => {
-            htmlContent += `
-                <a href="https://www.themoviedb.org/movie/${movie.id}" target="_blank" class="movie-card-link">
-                    <div class="movie-card">
-                        <img src="${movie.poster}" alt="${movie.title}" loading="lazy">
-                        <div class="movie-info">
-                            <h4>${movie.title}</h4>
-                            <p>IMDb: ${movie.vote}</p>
-                        </div>
+            const cardLink = document.createElement("a");
+            cardLink.href = `https://www.themoviedb.org/movie/${movie.id}`;
+            cardLink.target = "_blank";
+            cardLink.className = "movie-card-link";
+
+            cardLink.innerHTML = `
+                <div class="movie-card">
+                    <img src="${movie.poster}" 
+                         alt="${movie.title}" 
+                         loading="lazy"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/500x281?text=Film+Karesi+Yok';">
+                    <div class="movie-info">
+                        <h4>${movie.title}</h4>
+                        <p>IMDb: ${movie.vote}</p>
                     </div>
-                </a>`;
+                </div>
+            `;
+            fragment.appendChild(cardLink);
         });
-        movieGrid.innerHTML = htmlContent;
+
+        movieGrid.appendChild(fragment);
     }
 
-    // SAYFA TAMAMEN YÜKLENDİĞİNDE SADECE BİR KEZ ÇALIŞTIR
-    window.onload = fetchMovies;
+    // Başlat fetchMovies();
+    fetchMovies();
+});
 </script>
 
 </body>

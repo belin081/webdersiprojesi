@@ -1,92 +1,135 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Şehrim</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şehrim - Afyonkarahisar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Şehrim AFYONKARAHİSAR </h1>
-
 <nav>
-  <a href="index.html">Ana Sayfa</a> |
-  <a href="about.html">Hakkında</a> |
-  <a href="cv.html">CV</a> |
-  <a href="contact.html">İletişim</a> |
-  <a href="sehrim.html">Şehrim</a> |
-  <a href="login.html">Giriş</a> |
-  <a href="mirasimiz.html">Mirasımız</a>
+    <a href="index.html">Ana Sayfa</a> |
+    <a href="about.html">Hakkında</a> |
+    <a href="cv.html">CV</a> |
+    <a href="contact.html">İletişim</a> |
+    <a href="sehrim.html">Şehrim</a> |
+    <a href="mirasimiz.html">Mirasımız</a>
 </nav>
 
-<!-- Üst Kısım: Renkli Başlık Alanı (Görseldeki Kırmızı Kısım Gibi) -->
-<section class="miras-header">
-    <div class="container">
-        <h1>Afyonkarahisar'ın Tarihi Mirası</h1>
-        <p>Binlerce yıllık tarihin izlerini taşıyan, Anadolu'nun kilidi Afyonkarahisar.</p>
-    </div>
-</section>
+<div class="container">
 
-<!-- Alt Kısım: Resimli ve Kısa Bilgili Kartlar -->
-<section class="miras-icerik">
-    <div class="container card-wrapper">
-        
-        <!-- 1. Kart: Afyon Kalesi -->
-        <div class="miras-card">
-            <img src="kale.jpg" alt="Afyon Kalesi">
-            <div class="card-text">
-                <h3>Karahisar Kalesi</h3>
-                <p>226 metre yükseklikteki volkanik bir kaya kütlesi üzerinde yer alan tarihi kale.</p>
+    <!-- ÜST TANITIM -->
+    <section class="hero">
+        <h1>Afyonkarahisar</h1>
+        <p>
+            Afyonkarahisar, tarihi dokusu, termal kaynakları ve eşsiz lezzetleriyle
+            Türkiye'nin en özel şehirlerinden biridir. Friglerden Osmanlı'ya kadar
+            uzanan köklü geçmişiyle dikkat çeker.
+        </p>
+    </section>
+
+    <!-- KÜLTÜREL YERLER -->
+    <section>
+        <h2>Önemli Yerler</h2>
+
+        <div class="place">
+            <img src="sehirresimleri/afyonkalesi.jpg">
+            <div>
+                <h3>Afyon Kalesi</h3>
+                <p>Şehrin simgesi olan kale, volkanik bir kaya üzerine kurulmuştur.</p>
             </div>
         </div>
 
-        <!-- 2. Kart: Frig Vadisi -->
-        <div class="miras-card">
-            <img src="frig.jpg" alt="Frig Vadisi">
-            <div class="card-text">
+        <div class="place reverse">
+            <img src="sehirresimleri/frig.jpg">
+            <div>
                 <h3>Frig Vadisi</h3>
-                <p>Kaya mezarları ve anıtlarıyla Anadolu'nun açık hava müzesi.</p>
+                <p>Antik Frig uygarlığından kalan kaya yapılarıyla ünlüdür.</p>
             </div>
         </div>
 
-    </div>
-</section>
+        <div class="place">
+            <img src="sehirresimleri/termal.jpg">
+            <div>
+                <h3>Termal Kaplıcalar</h3>
+                <p>Sağlık turizmi açısından Türkiye'nin önemli merkezlerindendir.</p>
+            </div>
+        </div>
 
-<script>
-let index = 1;
-goster(index);
+        <div class="place reverse">
+            <img src="sehirresimleri/hashas.jpg">
+            <div>
+                <h3>Haşhaşın Başkenti</h3>
+                  <p>Afyonkarahisar, Türkiye'nin haşhaş üretim merkezidir. Şehrin adındaki "Afyon" kelimesi de haşhaşın özünden gelir. 
+                 Haşhaşlı lokul, haşhaş ezmesi ve bükme gibi lezzetler şehrin mutfak kültürünün vazgeçilmezidir.
+               </p>    
+            </div>
+        </div>
 
-function sonraki() {
-  goster(index += 1);
-}
+        <div class="place">
+          <img src="sehirresimleri/emregolu.jpg">
+          <div>
+              <h3>Emre Gölü</h3>
+              <p>
+                  Frig Vadisi'nin kalbinde yer alan Emre Gölü, gün doğumu ve gün batımı manzaralarıyla büyüleyicidir. 
+                  Göl üzerinde Frig gemisiyle gezintiye çıkabilir veya çevresindeki tarihi kalıntıları keşfedebilirsiniz.
+              </p>
+          </div>
+      </div>
 
-function onceki() {
-  goster(index -= 1);
-}
+      </section>
 
-function goster(n) {
-  let slides = document.getElementsByClassName("slide");
+    <!-- SLIDER -->
+    <section>
+        <h2>Afyon'dan Görseller</h2>
 
-  if (n > slides.length) {
-    index = 1;
-  }
-  if (n < 1) {
-    index = slides.length;
-  }
+        <div class="slider-container">
+            <button onclick="prevSlide()">◀</button>
 
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+            <img id="slider" src="sehirresimleri/kale.jpg">
 
-  slides[index - 1].style.display = "block";
-}
-</script>
-</div>  
+            <button onclick="nextSlide()">▶</button>
+        </div>
+
+    </section>
+
+</div>
 
 <footer>
-  <p>© 2026 Kişisel Web Sitesi | Tüm hakları saklıdır.</p>
+    <p>© 2026 Kişisel Web Sitesi</p>
 </footer>
 
+<script>
+const images = [
+     "sehirresimleri/afyonkalesi.jpg",
+     "sehirresimleri/termal.jpg",
+     "sehirresimleri/frig.jpg",
+     "sehirresimleri/emregolu.jpg",
+     "sehirresimleri/hashas.jpg"
+     
+
+    
+];
+
+let i = 0;
+
+function showSlide() {
+    document.getElementById("slider").src = images[i];
+}
+
+function nextSlide() {
+    i++;
+    if (i >= images.length) i = 0;
+    showSlide();
+}
+
+function prevSlide() {
+    i--;
+    if (i < 0) i = images.length - 1;
+    showSlide();
+}
+</script>
+
 </body>
-</html> 
+</html>
