@@ -1,116 +1,161 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mirasımız</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomi Mirasımız - Belinay Kartal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1> Afyonkarahisar'ın Tarihi Mirası </h1>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-code-slash me-2"></i>Belinay Kartal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Hakkında</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-success ms-lg-3 mt-2 mt-lg-0" href="login.html">Giriş Yap</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<nav>
-  <a href="index.html">Ana Sayfa</a> |
-  <a href="about.html">Hakkında</a> |
-  <a href="cv.html">CV</a> |
-  <a href="contact.html">İletişim</a> |
-  <a href="sehrim.html">Şehrim</a> |
-  <a href="login.html">Giriş</a> |
-  <a href="mirasimiz.html">Mirasımız</a>
-</nav>
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold" style="color: #4B3F72;">Afyonkarahisar Gastronomi Mirası</h1>
+            <p class="lead text-muted">UNESCO tescilli lezzetlerin başkenti Afyon'un en özel tarifleri.</p>
+        </div>
 
-<div class="container">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5">
+            <div class="row g-0">
+                <div class="col-lg-5">
+                    <img src="https://www.orucoglu.com/storage/blogs/June2025/YCoctuluQNQOLATvfwNf.webp" class="img-fluid h-100" style="object-fit: cover; min-height: 300px;" alt="Afyon Keşkeği">
+                </div>
+                <div class="col-lg-7 p-4">
+                    <h2 class="fw-bold mb-3" style="color: #4B3F72;">AFYON KEŞKEĞİ</h2>
+                    <p>Afyonkarahisar'ın en meşhur tescilli lezzetlerinden biri olan Keşkek, özellikle düğünlerin ve özel günlerin vazgeçilmezidir.</p>
+                    
+                    <button class="btn text-white rounded-pill mb-3" style="background-color: #4B3F72;" type="button" data-bs-toggle="collapse" data-bs-target="#recipe1">
+                        Tarifi Görüntüle <i class="bi bi-chevron-down ms-1"></i>
+                    </button>
+                    
+                    <div class="collapse" id="recipe1">
+                        <div class="card card-body border-0 bg-light rounded-3">
+                            <ol class="small mb-0">
+                                <li><strong>Hazırlık:</strong> Toprak çömleğin en altına parça etleri yerleştirin.</li>
+                                <li><strong>Bakliyat:</strong> Nohut, aşurelik buğday ve tuzu ilave edin.</li>
+                                <li><strong>Pişirme:</strong> Odun fırınında 8-10 saat sabaha kadar pişmeye bırakın.</li>
+                                <li><strong>Dövme:</strong> Tahta kaşıkla etler ve buğday özleşene kadar ezilir.</li>
+                                <li><strong>Servis:</strong> Kızdırılmış tereyağlı salçalı sos ile servis yapılır.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <h1>Afyonkarahisar Gastronomi Mirası</h1>
-  <p>Afyonkarahisar, zengin mutfağı ile Türkiye'nin önemli gastronomi şehirlerinden biridir.</p>
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5">
+            <div class="row g-0 flex-row-reverse">
+                <div class="col-lg-5">
+                    <img src="https://imgrosetta.mynet.com.tr/file/16946757/16946757-1200x675.jpg" class="img-fluid h-100" style="object-fit: cover; min-height: 300px;" alt="Mercimekli Bükme">
+                </div>
+                <div class="col-lg-7 p-4">
+                    <h2 class="fw-bold mb-3" style="color: #4B3F72;">MERCİMEKLİ BÜKME</h2>
+                    <p>Adını özel katlama şeklinden alan bu eşsiz lezzet, Afyonkarahisar mutfağının vazgeçilmez hamur işlerinden biridir.</p>
+                    
+                    <button class="btn text-white rounded-pill mb-3" style="background-color: #4B3F72;" type="button" data-bs-toggle="collapse" data-bs-target="#recipe2">
+                        Tarifi Görüntüle <i class="bi bi-chevron-down ms-1"></i>
+                    </button>
+                    
+                    <div class="collapse" id="recipe2">
+                        <div class="card card-body border-0 bg-light rounded-3">
+                            <ol class="small mb-0">
+                                <li><strong>Hamur:</strong> Un, tuz ve su ile yoğrulur, ikiye bölünür.</li>
+                                <li><strong>Haşhaş:</strong> Açılan hamur iç yağ ve haşhaşla yağlanır.</li>
+                                <li><strong>İç Harç:</strong> Haşlanmış mercimek ve kavrulmuş soğanla hazırlanır.</li>
+                                <li><strong>Şekil:</strong> Dikdörtgen açılıp harç konur ve kapatılır.</li>
+                                <li><strong>Pişirme:</strong> 200 derecede 40 dakika pişirilir.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <!-- yemek 1 -->
-  <div class="food-section">
-    <img src="https://www.orucoglu.com/storage/blogs/June2025/YCoctuluQNQOLATvfwNf.webp" alt="Afyon Keşkeği">
-    <div class="food-text">
-        <h2>AFYON KEŞKEĞİ</h2>
-        <p>Afyonkarahisar'ın en meşhur tescilli lezzetlerinden biri olan Keşkek, özellikle düğünlerin ve özel günlerin vazgeçilmezidir.</p>
-        
-        <ol>
-            <li><strong>Hazırlık:</strong> Toprak çömleğin en altına parça etleri yerleştirin.</li>
-            <li><strong>Bakliyat Ekleme:</strong> Üzerine önceden yıkanmış nohut, aşurelik buğday ve tuzu ilave edin.</li>
-            <li><strong>Su İlavesi:</strong> Malzemelerin üzerini yaklaşık 10-15 cm geçecek kadar sıcak su ekleyin.</li>
-            <li><strong>Pişirme:</strong> Çömleği odun fırınına akşamdan koyun ve sabaha kadar (yaklaşık 8-10 saat) fırının kendi ısısında pişmeye bırakın.</li>
-            <li><strong>Dövme İşlemi:</strong> Fırından alınan keşkek, büyük tahta kaşık (veya tokmak) yardımıyla etler ve buğday özleşene kadar iyice ezilir.</li>
-            <li><strong>Servis:</strong> Tabaklara alındıktan sonra üzerine kızdırılmış tereyağlı salçalı sos dökülerek sıcak servis yapılır.</li>
-        </ol>
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5">
+            <div class="row g-0">
+                <div class="col-lg-5">
+                    <img src="https://i.nefisyemektarifleri.com/2016/06/27/visneli-ekmek-kadayifi-600x400.jpeg" class="img-fluid h-100" style="object-fit: cover; min-height: 300px;" alt="Vişneli Ekmek Kadayıfı">
+                </div>
+                <div class="col-lg-7 p-4">
+                    <h2 class="fw-bold mb-3" style="color: #4B3F72;">VİŞNELİ EKMEK KADAYIFI</h2>
+                    <p>Vişnenin mayhoş tadı ve ekmek kadayıfının yumuşak dokusuyla eşsiz bir lezzet sunar.</p>
+                    
+                    <button class="btn text-white rounded-pill mb-3" style="background-color: #4B3F72;" type="button" data-bs-toggle="collapse" data-bs-target="#recipe3">
+                        Tarifi Görüntüle <i class="bi bi-chevron-down ms-1"></i>
+                    </button>
+                    
+                    <div class="collapse" id="recipe3">
+                        <div class="card card-body border-0 bg-light rounded-3">
+                            <ol class="small mb-0">
+                                <li><strong>Şerbet:</strong> Su, şeker ve vişne kaynatılır.</li>
+                                <li><strong>Islatma:</strong> Kadayıf su ile ıslatılır, suyu süzülür.</li>
+                                <li><strong>Pişirme:</strong> Kepçe kepçe şerbet verilerek ocakta pişirilir.</li>
+                                <li><strong>Püf Noktası:</strong> Her yerinin şerbeti eşit çektiğinden emin olunur.</li>
+                                <li><strong>Servis:</strong> Kaymak ile servis edilir.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <p><em>Not: Geleneksel yöntem odun fırını olsa da, evde kısık ateşte düdüklü tencerede yaklaşık 2 saatte de pişirilebilir.</em></p>
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5">
+            <div class="row g-0 flex-row-reverse">
+                <div class="col-lg-5">
+                    <img src="https://img.lezzetler.com/yuklenen5/sakala-carpan-corbasi-afyonkarahisar-23397.jpg" class="img-fluid h-100" style="object-fit: cover; min-height: 300px;" alt="Sakala Çarpan Çorbası">
+                </div>
+                <div class="col-lg-7 p-4">
+                    <h2 class="fw-bold mb-3" style="color: #4B3F72;">SAKALA ÇARPAN ÇORBASI</h2>
+                    <p>Erişte ve yeşil mercimek sayesinde oldukça besleyici bir başlangıç yemeğidir.</p>
+                    
+                    <button class="btn text-white rounded-pill mb-3" style="background-color: #4B3F72;" type="button" data-bs-toggle="collapse" data-bs-target="#recipe4">
+                        Tarifi Görüntüle <i class="bi bi-chevron-down ms-1"></i>
+                    </button>
+                    
+                    <div class="collapse" id="recipe4">
+                        <div class="card card-body border-0 bg-light rounded-3">
+                            <ol class="small mb-0">
+                                <li><strong>Mercimek:</strong> Haşlanır ve suyu süzülür.</li>
+                                <li><strong>Kavurma:</strong> Soğan ve un yağda kavrulur.</li>
+                                <li><strong>Erişte:</strong> Mercimek ve et suyu eklendikten sonra erişteler atılır.</li>
+                                <li><strong>Sos:</strong> Nane ve tereyağı kızdırılıp üzerine gezdirilir.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
+    <footer>
+        <p class="mb-0">© 2026 Belinay Kartal | Tüm hakları saklıdır.</p>
+    </footer>
 
-  <!-- YEMEK 2 -->
-  <div class="food-section reverse">
-    <img src="https://imgrosetta.mynet.com.tr/file/16946757/16946757-1200x675.jpg" alt="Afyon Bükmesi">
-    <div class="food-text">
-        <h2>MERCİMEKLİ BÜKME</h2>
-        <p>Adını özel katlama şeklinden alan bu eşsiz lezzet, Afyonkarahisar mutfağının vazgeçilmez hamur işlerinden biridir.</p>
-        
-        <ol>
-         <li><strong>Hamur Hazırlığı:</strong> Un, tuz ve su karıştırılarak kulak memesi yumuşaklığında bir hamur elde edilene kadar yoğrulur. Hamur iki eşit parçaya bölünür.</li>
-         <li><strong>Yağlama ve Haşhaş:</strong> İlk parça açılıp iç yağla yağlandıktan sonra üzerine sıvıyağla karıştırılmış haşhaş sürülür ve bohça haline getirilir.</li>
-         <li><strong>Katlama:</strong> Diğer parça da aynı şekilde açılır, ilk bohça ortasına konur ve tekrar bohça şeklinde katlanarak dinlenmeye bırakılır.</li>
-         <li><strong>İç Harcı:</strong> Haşlanmış mercimek, yağda kavrulmuş ince soğan, tuz ve karabiber ile karıştırılır. (İsteğe göre patatesli de yapılabilir).</li>
-         <li><strong>Şekil Verme:</strong> Dinlenen hamur parçalara ayrılır, dikdörtgen açılır ve ortasına harç konularak kenarları karşılıklı kapatılır.</li>
-         <li><strong>Pişirme:</strong> Üzeri yağlanan hamurlar, 200 derecede ısıtılmış fırında yaklaşık 40 dakika pişirilir.</li>
-        </ol>
-
-        <p><em>Not: Yaz aylarında vişne hoşafı, kavun veya karpuz ile tüketilmesi gelenektir.</em></p>
-    </div>
-</div>
-
-  <!-- YEMEK 3 -->
-  <div class="food-section">
-    <img src="https://i.nefisyemektarifleri.com/2016/06/27/visneli-ekmek-kadayifi-600x400.jpeg" alt="Vişneli Ekmek Kadayıfı">
-    <div class="food-text">
-        <h2>VİŞNELİ EKMEK KADAYIFI</h2>
-        <p>Afyonkarahisar mutfağının baş tacı olan bu tatlı, vişnenin mayhoş tadı ve ekmek kadayıfının yumuşak dokusuyla eşsiz bir lezzet sunar.</p>
-        
-        <ol>
-            <li><strong>Şerbet Hazırlığı:</strong> Su, şeker ve vişne, şerbet hazırlamak üzere bir tencereye alınır ve kaynatılır.</li>
-            <li><strong>Kadayıfı Islatma:</strong> Ekmek kadayıfı su ile ıslatılır; fazla suyunu almak için temiz bir bezle üzerine hafifçe bastırılır.</li>
-            <li><strong>Tepsi Seçimi:</strong> Kadayıfın yaklaşık iki katı büyüklüğünde bir tepsi tercih edilerek kadayıf tepsiye yerleştirilir.</li>
-            <li><strong>Limon İlavesi:</strong> Kaynayan şerbete limon sıkılır, 5 dakika daha kaynatıldıktan sonra vişneler süzülür.</li>
-            <li><strong>Pişirme Süreci:</strong> Kadayıf ocağa alınır, üzerine kepçe kepçe şerbet ilave edilerek kontrollü ateşte pişirilir.</li>
-            <li><strong>Şerbetleme:</strong> Pişirme sırasında kenarlara akan şerbet sürekli kadayıfın üzerine dökülür. Kadayıf yaklaşık iki katına çıkana kadar işleme devam edilir.</li>
-            <li><strong>Kontrol ve Servis:</strong> Şerbetini iyice çeken tatlı kürdanla kontrol edilir. Soğuduktan sonra kaymak veya dondurma ile servis edilir.</li>
-        </ol>
-
-        <p><em>Önemli: Kadayıfın her yerinin şerbeti eşit çektiğinden emin olmak lezzetin püf noktasıdır.</em></p>
-    </div>
-</div>
-
-  <!-- YEMEK 4 -->
-  <div class="food-section reverse">
-    <img src="https://img.lezzetler.com/yuklenen5/sakala-carpan-corbasi-afyonkarahisar-23397.jpg" alt="Sakala Çarpan Çorbası">
-    <div class="food-text">
-        <h2>SAKALA ÇARPAN ÇORBASI</h2>
-        <p>İçindeki erişte ve yeşil mercimek sayesinde oldukça besleyici olan bu çorba, Afyon mutfağının en sevilen başlangıç yemeklerinden biridir.</p>
-        
-        <ol>
-            <li><strong>Mercimek Hazırlığı:</strong> Yeşil mercimekler güzelce yıkanır, haşlanır ve suyu süzülerek kenara alınır.</li>
-            <li><strong>Soğan Kavurma:</strong> Ayrı bir tencerede ince doğranmış soğanlar, iki yemek kaşığı yağla kısık ateşte pembeleşene kadar kavrulur.</li>
-            <li><strong>Un Ekleme:</strong> Kavrulan soğanlara un eklenerek kokusu çıkana kadar bir iki defa daha çevrilir.</li>
-            <li><strong>Birleştirme:</strong> Haşlanmış mercimek, tuz ve et suyu tencereye eklenir.</li>
-            <li><strong>Erişte İlavesi:</strong> Karışım kaynamaya başlayınca ev makarnası (erişte) ilave edilir ve yaklaşık 15-20 dakika daha pişirilir.</li>
-            <li><strong>Sosyallik ve Servis:</strong> İki yemek kaşığı yağ tavada eritilir, içine nane eklenerek kızdırılır ve çorbanın üzerinde gezdirilir.</li>
-        </ol>
-
-        <p><em>İpucu: Ev makarnası yerine şehriye kullanılabilir. Arzuya göre nane yerine limon ile de servis edilebilir.</em></p>
-    </div>
-</div>
-
-</div>
-<footer>
-  <p>© 2026 Kişisel Web Sitesi | Tüm hakları saklıdır.</p>
-</footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

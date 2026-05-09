@@ -1,65 +1,107 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giriş Yap</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - Belinay Kartal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Giriş Yap</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-code-slash me-2 fs-4"></i> 
+            <span>Belinay Kartal</span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Hakkında</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-success ms-lg-3 mt-2 mt-lg-0" href="login.html">Giriş Yap</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<nav>
-  <a href="index.html">Ana Sayfa</a> |
-  <a href="about.html">Hakkında</a> |
-  <a href="cv.html">CV</a> |
-  <a href="contact.html">İletişim</a> |
-  <a href="sehrim.html">Şehrim</a> |
-  <a href="login.html">Giriş</a> |
-  <a href="mirasimiz.html">Mirasımız</a>
-</nav>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+        <div class="card border-0 shadow-lg rounded-4 p-5" style="max-width: 450px; width: 100%;">
+            <div class="text-center mb-4">
+                <div class="display-1 text-primary"><i class="bi bi-person-circle" style="color: #4B3F72;"></i></div>
+                <h2 class="fw-bold" style="color: #4B3F72;">Giriş Yap</h2>
+                <p class="text-muted small">Lütfen bilgilerinizi kontrol ederek giriniz.</p>
+            </div>
 
-<div class="container">
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Kullanıcı Adı (E-posta)</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-envelope"></i></span>
+                        <input type="email" id="email" class="form-control border-start-0" placeholder="g231210xxx@sakarya.edu.tr" required>
+                    </div>
+                </div>
 
-  <form onsubmit="return kontrol()">
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Şifre</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-lock"></i></span>
+                        <input type="password" id="password" class="form-control border-start-0" placeholder="Şifreniz" required>
+                    </div>
+                </div>
 
-    <label>Kullanıcı Adı:</label><br>
-    <input type="text" id="kullanici"><br><br>
+                <button type="submit" class="btn w-100 py-2 fw-bold text-white shadow-sm" style="background-color: #4B3F72; border-radius: 50px;">
+                    Giriş Yap
+                </button>
+            </form>
 
-    <label>Şifre:</label><br>
-    <input type="password" id="sifre"><br><br>
+            <div id="loginMessage" class="mt-4 text-center"></div>
+        </div>
+    </div>
 
-    <button type="submit">Giriş Yap</button>
+    <footer>
+        <p class="mb-0">© 2026 Kişisel Web Sitesi | Tüm hakları saklıdır.</p>
+    </footer>
 
-  </form>
+   <script>
+    function FrmKontrol() {
+        // Hocanın kullandığı değişken isimleri ve yöntemle alıyoruz
+        var usrKul = document.getElementById("email").value;
+        var s1 = document.getElementById("password").value;
 
-</div>
+        // 1. Kullanıcı adı (e-posta) uzunluk kontrolü
+        if (usrKul.length < 3) {
+            alert("Lütfen kullanıcı adını kontrol ediniz");
+            return false;
+        }
 
-<script>
-function kontrol() {
-  let kullanici = document.getElementById("kullanici").value;
-  let sifre = document.getElementById("sifre").value;
+        // 2. Şifre uzunluk kontrolü
+        if (s1.length < 3) {
+            alert("Şifreler minimum 3 karakter olmalı");
+            return false;
+        }
 
-  if (kullanici == "" || sifre == "") {
-    alert("Boş bırakmayın!");
-    return false;
-  }
+        // 3. E-posta format kontrolü (Ödev kriteri için ekledik)
+        if (!usrKul.includes("@sakarya.edu.tr")) {
+            alert("Lütfen Sakarya Üniversitesi e-postanızı giriniz");
+            return false;
+        }
 
-  if (kullanici == "admin" && sifre == "1234") {
-    alert("Giriş başarılı!");
-    return true;
-  } else {
-    alert("Hatalı giriş!");
-    return false;
-  }
-}
-</script>
-</div>  
+        // Eğer her şey doğruysa
+        alert("Giriş başarılı! Hoş geldin Belinay.");
+        window.location.href = "index.html"; // Ana sayfaya yönlendir
+        return true;
+    }
+  </script>
 
-<footer>
-  <p>© 2026 Kişisel Web Sitesi | Tüm hakları saklıdır.</p>
-</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

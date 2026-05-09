@@ -1,61 +1,93 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Ana Sayfa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belinay Kartal | Kişisel Web Sitesi</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-<h1>Hoşgeldiniz</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-code-slash me-2"></i>Belinay Kartal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Hakkında</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-success ms-lg-3 mt-2 mt-lg-0" href="login.html">Giriş Yap</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<nav>
-  <a href="index.html">Ana Sayfa</a> |
-  <a href="about.html">Hakkında</a> |
-  <a href="cv.html">CV</a> |
-  <a href="contact.html">İletişim</a> |
-  <a href="sehrim.html">Şehrim</a> |
-  <a href="login.html">Giriş</a> |
-  <a href="mirasimiz.html">Mirasımız</a>
+    <div class="container hero-section">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-8">
+                <img src="profil.jpg" alt="Belinay Kartal" class="rounded-circle profile-img shadow mb-4">
+                
+                <h1 class="display-4 fw-bold" style="color: #4B3F72;">Hoş Geldiniz</h1>
+                <p class="lead text-muted mb-5">
+                    Ben Belinay, Sakarya Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. 
+                    Bu web sitesi benim yazılım yolculuğumun bir parçasıdır.
+                </p>
 
-</nav>
-
-<div class="container">
-
-  <h2>Hoşgeldiniz</h2>
-  <p>Bu benim kişisel web sitem. Aşağıdan sayfaları inceleyebilirsiniz.</p>
-
-  <div class="cards">
-
-    <div class="container">
-
-  <h2>Hoşgeldiniz</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Hakkımda</h3>
-      <p>Kendim hakkında bilgiler</p>
-      <a href="about.html"><button>Git</button></a>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+                            <i class="bi bi-person-circle fs-1 text-primary"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Hakkımda</h5>
+                                <a href="about.html" class="btn btn-outline-primary btn-sm rounded-pill">İncele</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+                            <i class="bi bi-geo-alt-fill fs-1 text-danger"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Şehrim</h5>
+                                <a href="sehrim.html" class="btn btn-outline-danger btn-sm rounded-pill">Keşfet</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+                            <i class="bi bi-egg-fried fs-1 text-warning"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Mirasımız</h5>
+                                <a href="mirasimiz.html" class="btn btn-outline-warning btn-sm rounded-pill">Göz At</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>Şehrim</h3>
-      <p>Yaşadığım şehir</p>
-      <a href="sehrim.html"><button>Git</button></a>
-    </div>
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2026 Belinay Kartal | Sakarya Üniversitesi Web Tasarımı Ödevi</p>
+        </div>
+    </footer>
 
-    <div class="card">
-      <h3>Mirasımız</h3>
-      <p>Kültürel miras</p>
-      <a href="mirasimiz.html"><button>Git</button></a>
-    </div>
-
-  </div>
-  <footer>
-  <p>© 2026 Kişisel Web Sitesi | Tüm hakları saklıdır.</p>
-</footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

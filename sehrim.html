@@ -4,132 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Şehrim - Afyonkarahisar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Ana Sayfa</a> |
-    <a href="about.html">Hakkında</a> |
-    <a href="cv.html">CV</a> |
-    <a href="contact.html">İletişim</a> |
-    <a href="sehrim.html">Şehrim</a> |
-    <a href="mirasimiz.html">Mirasımız</a>
-</nav>
-
-<div class="container">
-
-    <!-- ÜST TANITIM -->
-    <section class="hero">
-        <h1>Afyonkarahisar</h1>
-        <p>
-            Afyonkarahisar, tarihi dokusu, termal kaynakları ve eşsiz lezzetleriyle
-            Türkiye'nin en özel şehirlerinden biridir. Friglerden Osmanlı'ya kadar
-            uzanan köklü geçmişiyle dikkat çeker.
-        </p>
-    </section>
-
-    <!-- KÜLTÜREL YERLER -->
-    <section>
-        <h2>Önemli Yerler</h2>
-
-        <div class="place">
-            <img src="sehirresimleri/afyonkalesi.jpg">
-            <div>
-                <h3>Afyon Kalesi</h3>
-                <p>Şehrin simgesi olan kale, volkanik bir kaya üzerine kurulmuştur.</p>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-code-slash me-2 fs-4"></i> 
+            <span>Belinay Kartal</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                   <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Hakkında</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-success ms-lg-3 mt-2 mt-lg-0" href="login.html">Giriş Yap</a>
+                </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <div class="place reverse">
-            <img src="sehirresimleri/frig.jpg">
-            <div>
-                <h3>Frig Vadisi</h3>
-                <p>Antik Frig uygarlığından kalan kaya yapılarıyla ünlüdür.</p>
+    <div class="container py-5">
+        <section class="text-center mb-5 hero-section p-5 rounded-4 shadow-sm bg-white">
+            <h1 class="display-4 fw-bold" style="color: #4B3F72;">Afyonkarahisar</h1>
+            <p class="lead text-muted">
+                Tarihi dokusu, termal kaynakları ve eşsiz lezzetleriyle Türkiye'nin en özel şehirlerinden biridir. 
+                Anadolu'nun kilidi Afyonkarahisar'ı keşfedin.
+            </p>
+        </section>
+
+        <h2 class="text-center mb-4" style="color: #4B3F72;">Önemli Yerler</h2>
+        <div class="row g-4">
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="sehirresimleri/afyonkalesi.jpg" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Afyon Kalesi</h5>
+                        <p class="card-text text-muted">Volkanik bir kaya kütlesi üzerine kurulu, şehrin her yerinden görünen eşsiz bir kale.</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="place">
-            <img src="sehirresimleri/termal.jpg">
-            <div>
-                <h3>Termal Kaplıcalar</h3>
-                <p>Sağlık turizmi açısından Türkiye'nin önemli merkezlerindendir.</p>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="sehirresimleri/frig.jpg" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Frig Vadisi</h5>
+                        <p class="card-text text-muted">Kaya mezarları ve anıtlarıyla Anadolu'nun açık hava müzesi olan antik bölge.</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="place reverse">
-            <img src="sehirresimleri/hashas.jpg">
-            <div>
-                <h3>Haşhaşın Başkenti</h3>
-                  <p>Afyonkarahisar, Türkiye'nin haşhaş üretim merkezidir. Şehrin adındaki "Afyon" kelimesi de haşhaşın özünden gelir. 
-                 Haşhaşlı lokul, haşhaş ezmesi ve bükme gibi lezzetler şehrin mutfak kültürünün vazgeçilmezidir.
-               </p>    
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="sehirresimleri/termal.jpg" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Termal Kaplıcalar</h5>
+                        <p class="card-text text-muted">Şifalı sularıyla sağlık turizminin merkezi olan Afyon'un can damarı.</p>
+                    </div>
+                </div>
             </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="sehirresimleri/hashas.jpg" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Haşhaş ve Mutfak</h5>
+                        <p class="card-text text-muted">Şehrin adını aldığı "Afyon" (haşhaş), mutfak kültürünün vazgeçilmez bir parçasıdır.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="sehirresimleri/emregolu.jpg" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Emre Gölü</h5>
+                        <p class="card-text text-muted">Frig Vadisi'nin kalbinde, büyüleyici gün batımı manzaraları sunan bir doğal harika.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="place">
-          <img src="sehirresimleri/emregolu.jpg">
-          <div>
-              <h3>Emre Gölü</h3>
-              <p>
-                  Frig Vadisi'nin kalbinde yer alan Emre Gölü, gün doğumu ve gün batımı manzaralarıyla büyüleyicidir. 
-                  Göl üzerinde Frig gemisiyle gezintiye çıkabilir veya çevresindeki tarihi kalıntıları keşfedebilirsiniz.
-              </p>
-          </div>
-      </div>
+        <section class="mt-5">
+            <div class="card border-0 shadow-sm p-4 rounded-4 text-center bg-white">
+                <h3 class="mb-4" style="color: #4B3F72;">Şehir Galerisi</h3>
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <button class="btn btn-dark rounded-circle" onclick="prevSlide()"><i class="bi bi-chevron-left"></i></button>
+                    <img id="slider" src="" class="rounded-4 shadow-sm" style="width: 100%; max-width: 700px; height: 400px; object-fit: cover;">
+                    <button class="btn btn-dark rounded-circle" onclick="nextSlide()"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </div>
 
-      </section>
+    <footer>
+        <p class="mb-0">© 2026 Belinay Kartal | Kişisel Web Sitesi</p>
+    </footer>
 
-    <!-- SLIDER -->
-    <section>
-        <h2>Afyon'dan Görseller</h2>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <div class="slider-container">
-            <button onclick="prevSlide()">◀</button>
+    <script>
+        const images = [
+             "sehirresimleri/afyonkalesi.jpg",
+             "sehirresimleri/termal.jpg",
+             "sehirresimleri/frig.jpg",
+             "sehirresimleri/emregolu.jpg",
+             "sehirresimleri/hashas.jpg"
+        ];
 
-            <img id="slider" src="sehirresimleri/kale.jpg">
+        let i = 0;
 
-            <button onclick="nextSlide()">▶</button>
-        </div>
+        // Sayfa açıldığında ilk resmi yükle (Hatanın çözümü)
+        window.onload = function() {
+            showSlide();
+        };
 
-    </section>
+        function showSlide() {
+            document.getElementById("slider").src = images[i];
+        }
 
-</div>
+        function nextSlide() {
+            i++;
+            if (i >= images.length) i = 0;
+            showSlide();
+        }
 
-<footer>
-    <p>© 2026 Kişisel Web Sitesi</p>
-</footer>
-
-<script>
-const images = [
-     "sehirresimleri/afyonkalesi.jpg",
-     "sehirresimleri/termal.jpg",
-     "sehirresimleri/frig.jpg",
-     "sehirresimleri/emregolu.jpg",
-     "sehirresimleri/hashas.jpg"
-     
-
-    
-];
-
-let i = 0;
-
-function showSlide() {
-    document.getElementById("slider").src = images[i];
-}
-
-function nextSlide() {
-    i++;
-    if (i >= images.length) i = 0;
-    showSlide();
-}
-
-function prevSlide() {
-    i--;
-    if (i < 0) i = images.length - 1;
-    showSlide();
-}
-</script>
-
+        function prevSlide() {
+            i--;
+            if (i < 0) i = images.length - 1;
+            showSlide();
+        }
+    </script>
 </body>
 </html>
