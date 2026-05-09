@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -13,95 +13,84 @@
     <nav class="navbar navbar-expand-lg navbar-dark shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-            <i class="bi bi-code-slash me-2 fs-4"></i> 
-            <span>Belinay Kartal</span>
+                <i class="bi bi-code-slash me-2"></i>Belinay Kartal
             </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">Hakkında</a></li>
-                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-                <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
-                <li class="nav-item">
-                    <a class="btn btn-outline-success ms-lg-3 mt-2 mt-lg-0" href="login.html">Giriş Yap</a>
-                </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-        <div class="card border-0 shadow-lg rounded-4 p-5" style="max-width: 450px; width: 100%;">
-            <div class="text-center mb-4">
-                <div class="display-1 text-primary"><i class="bi bi-person-circle" style="color: #4B3F72;"></i></div>
-                <h2 class="fw-bold" style="color: #4B3F72;">Giriş Yap</h2>
-                <p class="text-muted small">Lütfen bilgilerinizi kontrol ederek giriniz.</p>
-            </div>
-
-            <form id="loginForm">
+    <div class="container login-wrapper">
+        <div class="login-card shadow-lg">
+            <h2 class="text-center mb-4">Giriş Yap</h2>
+            
+            <form action="login.php" method="POST" onsubmit="return FrmKontrol()">
                 <div class="mb-3">
-                    <label class="form-label fw-bold">Kullanıcı Adı (E-posta)</label>
-                    <div class="input-group">
-                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-envelope"></i></span>
-                        <input type="email" id="email" class="form-control border-start-0" placeholder="g231210xxx@sakarya.edu.tr" required>
-                    </div>
+                    <label class="form-label small fw-bold">E-posta</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="b2412100001@sakarya.edu.tr">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label small fw-bold">Şifre</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Şifre">
                 </div>
 
                 <div class="mb-4">
-                    <label class="form-label fw-bold">Şifre</label>
-                    <div class="input-group">
-                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-lock"></i></span>
-                        <input type="password" id="password" class="form-control border-start-0" placeholder="Şifreniz" required>
-                    </div>
+                    <label class="form-label small fw-bold">Şifre Tekrar</label>
+                    <input type="password" id="password2" class="form-control" placeholder="Şifre Tekrar">
                 </div>
 
-                <button type="submit" class="btn w-100 py-2 fw-bold text-white shadow-sm" style="background-color: #4B3F72; border-radius: 50px;">
-                    Giriş Yap
-                </button>
+                <button type="submit" class="btn btn-login w-100 py-2">Giriş Yap</button>
             </form>
-
-            <div id="loginMessage" class="mt-4 text-center"></div>
         </div>
     </div>
 
     <footer>
-        <p class="mb-0">© 2026 Kişisel Web Sitesi | Tüm hakları saklıdır.</p>
+        <p class="mb-0">© 2026 Belinay Kartal | Sakarya Üniversitesi</p>
     </footer>
 
-   <script>
-    function FrmKontrol() {
-        // Hocanın kullandığı değişken isimleri ve yöntemle alıyoruz
-        var usrKul = document.getElementById("email").value;
-        var s1 = document.getElementById("password").value;
+    <script>
+    function FrmKontrol(){
+        var email = document.getElementById("email").value;
+        var sifre = document.getElementById("password").value;
+        var sifre2 = document.getElementById("password2").value;
 
-        // 1. Kullanıcı adı (e-posta) uzunluk kontrolü
-        if (usrKul.length < 3) {
-            alert("Lütfen kullanıcı adını kontrol ediniz");
+        // Boş kontrol
+        if(email == "" || sifre == "" || sifre2 == ""){
+            alert("Lütfen tüm alanları doldurunuz!");
             return false;
         }
 
-        // 2. Şifre uzunluk kontrolü
-        if (s1.length < 3) {
-            alert("Şifreler minimum 3 karakter olmalı");
+        // Mail kontrol
+        if(!email.includes("@sakarya.edu.tr")){
+            alert("Geçerli bir okul maili giriniz (@sakarya.edu.tr)");
             return false;
         }
 
-        // 3. E-posta format kontrolü (Ödev kriteri için ekledik)
-        if (!usrKul.includes("@sakarya.edu.tr")) {
-            alert("Lütfen Sakarya Üniversitesi e-postanızı giriniz");
+        // Şifre uzunluk
+        if(sifre.length < 8){
+            alert("Şifre en az 8 karakter olmalı!");
             return false;
         }
 
-        // Eğer her şey doğruysa
-        alert("Giriş başarılı! Hoş geldin Belinay.");
-        window.location.href = "index.html"; // Ana sayfaya yönlendir
-        return true;
+        // Şifre eşleşme
+        if(sifre !== sifre2){
+            alert("Girdiğiniz şifreler birbiriyle uyuşmuyor!");
+            return false;
+        }
+
+        return true; // Her şey doğruysa login.php'ye gönderir
     }
-  </script>
+    </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
