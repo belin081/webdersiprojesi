@@ -100,7 +100,7 @@ h1, h2 {
     overflow: hidden;
 }
 
-/* --- FOOTER --- */
+/* --- FOOTER  (alt bilgi çerçevesi ) --- */
 footer { 
     background-color: #4B3F72; 
     color: white; 
@@ -108,7 +108,7 @@ footer {
     margin-top: 60px; 
     text-align: center;
 }
-/* --- ÖZGEÇMİŞ (CV) ÖZEL STİLLERİ --- */
+/* --- CV STİLLERİ --- */
 
 /* 1. Tablo Tasarımı */
 .table {
@@ -156,7 +156,7 @@ hr {
     border-top: 2px solid rgba(75, 63, 114, 0.1);
     margin: 30px 0;
 }
-/* --- LOGIN SAYFASI ÖZEL STİLLERİ --- */
+/* --- LOGIN SAYFASI STİLLERİ --- */
 
 /* Giriş kutusunun ekranın tam ortasında durmasını sağlar */
 .login-wrapper {
@@ -173,14 +173,14 @@ hr {
     padding: 40px;
     box-shadow: 0 15px 35px rgba(75, 63, 114, 0.15);
     max-width: 400px;
-    width: 100%;
+    width: 100%; /* genişlik */
 }
 
 /* Input (giriş) kutularını güzelleştirelim */
 .login-card .form-control {
-    border-radius: 12px;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
+    border-radius: 12px; /* dikdörtgen köşelerini yuvarlatır */
+    padding: 12px 15px; /* resimle çerçeve rası beyaz boşluk */
+    border: 1px solid #ddd; /* çerçeve */
     transition: 0.3s;
 }
 
@@ -211,7 +211,7 @@ hr {
     transform: scale(1.02);
     color: white;
 }
-/* --- İLETİŞİM SAYFASI ÖZEL STİLLERİ --- */
+/* --- İLETİŞİM SAYFASI STİLLERİ--- */
 
 /* Form kutusunun genel gölgesi ve köşeleri */
 .card.shadow-lg {
@@ -228,7 +228,7 @@ hr {
 
 .form-control:focus {
     background-color: #fff;
-    border-color: #4B3F72; /* Odaklanınca senin morun olsun */
+    border-color: #4B3F72; /* Odaklanınca mor olur */
     box-shadow: 0 0 8px rgba(75, 63, 114, 0.2);
     color: #4B3F72;
 }
@@ -255,7 +255,7 @@ hr {
     color: #FFF6CC !important;
     transition: 0.3s;
 }
-/* --- MİRASIMIZ SAYFASI ÖZEL DOKUNUŞLAR --- */
+/* --- MİRASIMIZ SAYFASI STİLLERİ --- */
 
 /* Yemek resimlerinin her zaman kutuyu tam doldurmasını sağlar */
 .card img {
@@ -263,7 +263,7 @@ hr {
     transition: transform 0.5s ease;
 }
 
-/* Mouse ile üzerine gelince resim hafifçe büyüsün (Premium hissi verir) */
+/* Mouse ile üzerine gelince resim hafifçe büyür  */
 .card:hover img {
     transform: scale(1.05);
 }
@@ -281,11 +281,11 @@ hr {
     color: #4B3F72;
 }
 
-/* --- PROFİL: MODERN DİKEY DİKDÖRTGEN TASARIMI --- */
+/* --- PROFİL: DİKEY DİKDÖRTGEN TASARIMI --- */
 
 .profile-img-pencere {
-    display: inline-block;
-    position: relative;
+    display: inline-block; /* kutunun sadece içeriği kadar yer kaplaması için */
+    position: relative; /* kutuyu serbet bırakır */
     padding: 10px; 
     border: 6px solid #1B263B; /* Gece mavisi çerçeve */
     
@@ -302,7 +302,7 @@ hr {
     width: 210px; 
     height: 280px; 
     
-    object-fit: cover;
+    object-fit: cover; /* resmin oranları bozulmadan çerçeveye sığması için*/
     /* Resmin köşelerini de dış çerçeveye uyumlu şekilde yuvarlıyoruz */
     border-radius: 12px; 
     
@@ -312,6 +312,6 @@ hr {
 
 /* Mouse ile üzerine gelince hafif büyüme efekti */
 .profile-img-pencere:hover {
-    transform: scale(1.03);
+    transform: scale(1.03); /* fare ile üzerine gelince %3 oranında büyür*/
     box-shadow: 0 15px 35px rgba(27, 38, 59, 0.25);
 }
