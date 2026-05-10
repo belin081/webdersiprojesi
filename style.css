@@ -280,3 +280,38 @@ hr {
 .collapse b, .collapse strong {
     color: #4B3F72;
 }
+
+/* --- PROFİL: MODERN DİKEY DİKDÖRTGEN TASARIMI --- */
+
+.profile-img-pencere {
+    display: inline-block;
+    position: relative;
+    padding: 10px; 
+    border: 6px solid #1B263B; /* Gece mavisi çerçeve */
+    
+    /* Köşeleri hafif ve zarifçe yuvarlatılmış dikdörtgen */
+    border-radius: 20px; 
+    
+    box-shadow: 0 10px 25px rgba(27, 38, 59, 0.15);
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.profile-img-pencere .profile-img {
+    /* Dikey dikdörtgen oranları (2:3 oranı çok şık durur) */
+    width: 210px; 
+    height: 280px; 
+    
+    object-fit: cover;
+    /* Resmin köşelerini de dış çerçeveye uyumlu şekilde yuvarlıyoruz */
+    border-radius: 12px; 
+    
+    border: 2px solid #FFF6CC; /* İçteki ince sarı hat */
+    display: block;
+}
+
+/* Mouse ile üzerine gelince hafif büyüme efekti */
+.profile-img-pencere:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(27, 38, 59, 0.25);
+}

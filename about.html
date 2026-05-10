@@ -10,17 +10,19 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark shadow">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
             <i class="bi bi-code-slash me-2 fs-4"></i> 
             <span>Belinay Kartal</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">Hakkında</a></li>
                 <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
@@ -36,34 +38,40 @@
     </nav>
 
     <div class="container py-5">
-        <section class="text-center mb-5 hero-section">
-            <img src="profil.jpg" alt="Profilim" class="profile-img rounded-circle shadow mb-4">
-            <h1 class="display-4 fw-bold">Merhaba, Ben Belinay</h1>
-            <p class="lead">Sakarya Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Yazılım dünyasına olan merakım her geçen gün artıyor.</p>
-        </section>
+    <section class="text-center mb-5 hero-section">
+        <div class="profile-img-pencere">
+            <img src="profile.jpg" class="profile-img" alt="Belinay Kartal">
+        </div>
+        
+        <h1 class="display-4 fw-bold mt-4" style="color: #1B263B;">Merhaba, Ben Belinay</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 700px;">
+            Sakarya Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Yazılım dünyasına olan merakım her geçen gün artıyor. 
+            Sürekli öğrenmeye ve yeni teknolojilerle projeler geliştirmeye odaklanıyorum.
+        </p>
+    </section>
 
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
-                    <h3 class="mb-3 text-center" style="color: #4B3F72;">Sevdiğim Bir Video</h3>
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                    </div>
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4" style="background-color: #fdfbf0;">
+                <h3 class="mb-3 text-center" style="color: #4B3F72;">Sevdiğim Bir Video</h3>
+                <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
+        </div>
 
-            <div class="col-lg-6">
-                <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
-                    <h3 class="mb-1 text-center" style="color: #4B3F72;">İlgi Alanlarım: Sevdiğim Filmler</h3>
-                    <p class="text-center text-muted small mb-3">(Veriler TMDb API üzerinden canlı çekilmektedir)</p>
-                    
-                    <div id="movie-grid" class="row g-3">
-                        <p class="text-center">Filmler yükleniyor...</p>
-                    </div>
+        <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4" style="background-color: #fdfbf0;">
+                <h3 class="mb-1 text-center" style="color: #4B3F72;">İlgi Alanlarım: Sevdiğim Filmler</h3>
+                <p class="text-center text-muted small mb-3">(Veriler TMDb API üzerinden canlı çekilmektedir)</p>
+                
+                <div id="movie-grid" class="row g-3">
+                    <p class="text-center">Filmler yükleniyor...</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <footer>
         <p class="mb-0">© 2026 Kişisel Web Sitesi | Tüm hakları saklıdır.</p>
