@@ -187,7 +187,7 @@ hr {
 /* Kutuya tıklandığında mor bir parlama verir */
 .login-card .form-control:focus {
     border-color: #4B3F72;
-    box-shadow: 0 0 0 0.25 margin-top: rgba(75, 63, 114, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(75, 63, 114, 0.25);
 }
 
 /* İkonların rengini mor yapalım */
